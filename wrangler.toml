@@ -1,0 +1,22 @@
+name = "token2chat-gate"
+main = "src/worker.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat_v2"]
+workers_dev = false
+
+routes = [
+  { pattern = "gate.token2chat.com", custom_domain = true }
+]
+
+[[kv_namespaces]]
+binding = "ECASH_STORE"
+id = "19e0600bc041418da828f444b4b8eeb3"
+
+[vars]
+TRUSTED_MINTS = "https://mint.token2chat.com"
+GATE_WALLET_ADDRESS = "0x6A408e0CCBc804c6862Ad6D8807B5878BFB0d0F7"
+MINT_URL = "https://mint.token2chat.com"
+
+# Secrets (set via: wrangler secret put OPENAI_API_KEY)
+# OPENAI_API_KEY
+# OPENROUTER_API_KEY

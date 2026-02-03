@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.dev.vars
+*.tsbuildinfo
+.wrangler/
+.secrets/
+
+# OS / editor
+.DS_Store
+*.log
+coverage/
+
+# pnpm uses pnpm-lock.yaml, not package-lock.json
+package-lock.json
