@@ -15,9 +15,9 @@ export interface MetricsRecord {
   ts: number;           // unix ms
   model: string;
   status: number;       // HTTP status code
-  ecash_in: number;     // sats received (stamp.amount)
-  price: number;        // sats charged (pricing rule)
-  change: number;       // sats returned as change
+  ecash_in: number;     // units received (stamp.amount) — 1 USD = 100,000 units
+  price: number;        // units charged (pricing rule)
+  change: number;       // units returned as change
   refunded: boolean;    // whether X-Cashu-Refund was sent
   upstream_ms: number;  // upstream latency
   error_code?: string;  // error classification
